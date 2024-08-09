@@ -54,11 +54,11 @@ export default function RemodelingVideo() {
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button
-                      className="bg-black text-white p-3 rounded-full"
+                      className="bg-brand-color-one text-white p-3 rounded-full"
                       aria-label="Play Video"
                     >
                       <svg
-                        className="w-10 h-10"
+                        className="w-10 h-10 ml-1"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="none"

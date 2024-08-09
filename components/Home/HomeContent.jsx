@@ -5,6 +5,7 @@ import HeroSectionContent from "./HeroSectionContent";
 import OurWork from "./OurWork";
 import ConstructionService from "./ConstructionService";
 import RemodelingVideo from "./RemodelingVideo";
+import CustomerTestimonials from "./CustomerTestimonials";
 
 export default function HomeContent() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function HomeContent() {
       <OurWork />
       <ConstructionService />
       <RemodelingVideo />
+      <CustomerTestimonials />
     </>
   );
 }
