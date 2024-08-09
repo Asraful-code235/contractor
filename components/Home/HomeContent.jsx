@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import HeroSectionContent from "./HeroSectionContent";
 import OurWork from "./OurWork";
+import ConstructionService from "./ConstructionService";
 
 export default function HomeContent() {
   useEffect(() => {
@@ -12,6 +13,7 @@ export default function HomeContent() {
     <>
       <HeroSectionContent />
       <OurWork />
+      <ConstructionService />
     </>
   );
 }

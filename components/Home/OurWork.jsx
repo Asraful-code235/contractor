@@ -11,6 +11,8 @@ export default function OurWork() {
     <div className="py-[94px] bg-brand-color-two">
       <div className="container mx-auto">
         <Heading
+          titleClass="text-white"
+          descriptionClass="text-white"
           title="Our Work"
           description="Choose an experienced General Contractor with local expertise for the job"
         />
