@@ -1,4 +1,6 @@
 import HeroSectionContent from "@/components/Home/HeroSectionContent";
+import HomeContent from "@/components/Home/HomeContent";
+import OurWork from "@/components/Home/OurWork";
 
 export const metadata = {
   metadataBase: new URL("https://www.jadoconstruction.com/"),
@@ -31,7 +33,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <HeroSectionContent />
+      <HomeContent />
     </div>
   );
 }
