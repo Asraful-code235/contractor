@@ -132,10 +132,8 @@ export default function Navbar() {
       <div
         ref={menuRef}
         className={cn(
-          "absolute top-[72px] left-0 w-full bg-white/90 backdrop-blur-md text-black p-2 transform transition-transform duration-300 ease-in-out",
-          isMenuOpen && !isAnimating
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0"
+          "absolute  left-0 w-full bg-white/90 backdrop-blur-md text-black p-2 duration-500 ease-in z-50",
+          isMenuOpen ? "top-[72px]" : "top-[-500px]"
         )}
         style={{ zIndex: isMenuOpen || isAnimating ? 99998 : -1 }}
       >
