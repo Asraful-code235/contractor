@@ -46,26 +46,26 @@ export default function ConstructionService() {
         title="Our service"
         description="Licensed, Insured, and Excellent Residential Remodeling & New Construction Services"
       />
-      <div className="mt-20">
-        <div className="flex flex-col gap-16 justify-center">
+      <div className="mt-10 lg:mt-20">
+        <div className="flex flex-col gap-8 lg:gap-16 justify-center">
           {services.map((service, i) => (
             <div
               key={service.id}
               className={cn(
-                "flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16",
+                "flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-16",
                 i % 2 === 0 ? "lg:flex-row-reverse" : ""
               )}
             >
-              <div>
+              <div className="lg:w-fit w-full">
                 <Image
-                  className="w-full"
+                  className="w-full h-full"
                   src={service.image}
                   alt={service.title}
                   width={600}
                   height={600}
                 />
               </div>
-              <div className="space-y-6 w-full lg:w-[40%]">
+              <div className="space-y-3 lg:space-y-6 w-full lg:w-[40%]">
                 <h3 className="text-2xl lg:text-4xl font-bold">
                   {service.title}
                 </h3>

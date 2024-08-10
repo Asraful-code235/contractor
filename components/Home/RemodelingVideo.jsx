@@ -14,7 +14,7 @@ export default function RemodelingVideo() {
         <div>
           <Heading title="45 Day Remodel" description="Complete Home Remodel" />
         </div>
-        <div className="flex flex-col gap-16 justify-center mt-16">
+        <div className="flex flex-col gap-16 justify-center mt-8 lg:mt-16">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
             <div className="space-y-6 w-full lg:w-[40%]">
               <h3 className="text-2xl lg:text-4xl font-bold">
