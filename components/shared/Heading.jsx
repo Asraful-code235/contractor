@@ -7,8 +7,6 @@ export default function Heading({
   descriptionClass,
   className,
 }) {
-  console.log({ className });
-
   return (
     <div className="space-y-4 lg:space-y-8">
       {title && (
