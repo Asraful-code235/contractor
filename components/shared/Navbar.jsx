@@ -79,12 +79,12 @@ export default function Navbar() {
       setTimeout(() => {
         setIsMenuOpen(false);
         setIsAnimating(false);
-      }, 300); // Match this duration with the CSS transition duration
+      }, 300);
     } else {
       setIsMenuOpen(true);
     }
   };
-  console.log({ isScrolled });
+
   return (
     <div
       className={cn(
@@ -93,8 +93,8 @@ export default function Navbar() {
         isScrolled
           ? "bg-white/50 backdrop-blur-md text-black shadow-lg top-0"
           : pathname === "/"
-          ? "bg-transparent text-white top-9"
-          : "bg-transparent text-black top-9"
+          ? "bg-transparent text-white top-0 lg:top-9"
+          : "bg-transparent text-black top-0 lg:top-9"
       )}
       style={{ zIndex: 99999 }}
     >
