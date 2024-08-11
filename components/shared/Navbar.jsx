@@ -84,17 +84,17 @@ export default function Navbar() {
       setIsMenuOpen(true);
     }
   };
-
+  console.log({ isScrolled });
   return (
     <div
       className={cn(
         lexend.className,
-        "px-2 lg:px-[94px] py-3 flex justify-between items-center fixed top-0 left-0 w-full transition-all duration-300",
+        "px-2 lg:px-[94px] py-3 flex justify-between items-center fixed left-0 w-full transition-all duration-300",
         isScrolled
-          ? "bg-white/50 backdrop-blur-md text-black shadow-lg"
+          ? "bg-white/50 backdrop-blur-md text-black shadow-lg top-0"
           : pathname === "/"
-          ? "bg-transparent text-white"
-          : "bg-transparent text-black"
+          ? "bg-transparent text-white top-9"
+          : "bg-transparent text-black top-9"
       )}
       style={{ zIndex: 99999 }}
     >

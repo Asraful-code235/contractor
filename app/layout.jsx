@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import DefaultProviders from "@/components/Providers/DefaultProviders";
+import TopBar from "@/components/shared/TopBar";
 
 export const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <main>
+          <TopBar />
           <Navbar />
           <div className="min-h-screen">{children}</div>
           <Footer />
