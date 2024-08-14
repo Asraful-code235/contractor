@@ -3,10 +3,10 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { IoLogoTwitter } from "react-icons/io5";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 
-export default function TopBar() {
+export default function TopBar({ utils }) {
   return (
     <div className="hidden lg:block">
       <div className="py-2 bg-brand-color-one text-black text-center text-sm lg:px-[94px] px-2 flex justify-between">
@@ -14,23 +14,25 @@ export default function TopBar() {
           <span>
             <FaPhoneAlt className="text-lg" />
           </span>
-          <span>(786) 553-4508 All week from 9 am to 7 pm</span>
+          <span>
+            {utils?.bannerText || "(786) 553-4508 All week from 9 am to 7 pm"}
+          </span>
         </div>
         <div className="flex gap-4">
-          <Link href="/">
+          <Link href={utils?.socialMediaLinks.faUrl}>
             <FaFacebook className="text-xl" />
           </Link>
-          <Link href="/">
+          <Link href={utils?.socialMediaLinks.youtubeUrl}>
             <IoLogoYoutube className="text-xl" />
           </Link>
-          <Link href="/">
+          <Link href={utils?.socialMediaLinks.twitterUrl}>
             <IoLogoTwitter className="text-xl" />
           </Link>
-          <Link href="/">
+          <Link href={utils?.socialMediaLinks.linkedInUrl}>
             <FaLinkedin className="text-xl" />
           </Link>
-          <Link href="/">
-            <FaYoutube className="text-xl" />
+          <Link href={utils?.socialMediaLinks.instagramUrl}>
+            <FaInstagram className="text-xl" />
           </Link>
         </div>
       </div>

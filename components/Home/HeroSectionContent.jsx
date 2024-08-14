@@ -1,9 +1,9 @@
 import HeroSection from "./HeroSection";
 
-export default function HeroSectionContent() {
+export default function HeroSectionContent({ homePageData }) {
   return (
     <>
-      <HeroSection />
+      <HeroSection homePageData={homePageData} />
     </>
   );
 }

@@ -10,7 +10,7 @@ export default function RemodelingVideo() {
 
   return (
     <div className="bg-gray-100">
-      <div className="py-8 px-2 lg:py-[94px] container mx-auto">
+      <div className="py-8 px-6 lg:py-[94px] container mx-auto">
         <div>
           <Heading title="45 Day Remodel" description="Complete Home Remodel" />
         </div>

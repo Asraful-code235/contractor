@@ -9,7 +9,7 @@ import { PiOfficeChair } from "react-icons/pi";
 
 export default function OurWork() {
   return (
-    <div className="py-[94px] bg-brand-color-two">
+    <div className="py-[94px] bg-brand-color-two px-6">
       <div className="container mx-auto">
         <Heading
           titleClass="text-white"

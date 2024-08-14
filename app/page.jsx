@@ -1,6 +1,6 @@
 import HeroSectionContent from "@/components/Home/HeroSectionContent";
 import HomeContent from "@/components/Home/HomeContent";
-import OurWork from "@/components/Home/OurWork";
+import { getHome } from "@/sanity/client";
 
 export const metadata = {
   metadataBase: new URL("https://www.jadoconstruction.com/"),
@@ -30,10 +30,12 @@ export const metadata = {
   ],
 };
 
-export default function Home() {
+export default async function Home() {
+  const homePageData = await getHome();
   return (
-    <div>
-      <HomeContent />
+    <div className="">
+      <HeroSectionContent homePageData={homePageData} />
+      <HomeContent homePageData={homePageData} />
     </div>
   );
 }

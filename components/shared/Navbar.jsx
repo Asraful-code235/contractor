@@ -31,9 +31,16 @@ const links = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false); // New state for managing animations
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [show, setShow] = useState(true);
   const menuRef = useRef(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname.includes("studio")) {
+      setShow(false);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,13 +95,14 @@ export default function Navbar() {
   return (
     <div
       className={cn(
+        show ? "flex" : "hidden",
         lexend.className,
-        "px-2 lg:px-[94px] py-3 flex justify-between items-center fixed left-0 w-full transition-all duration-300",
+        "px-6 lg:px-[94px] py-3 justify-between items-center fixed left-0 w-full transition-all duration-300",
         isScrolled
           ? "bg-white/50 backdrop-blur-md text-black shadow-lg top-0"
           : pathname === "/"
-          ? "bg-transparent text-white top-0 lg:top-9"
-          : "bg-transparent text-black top-0 lg:top-9"
+            ? "bg-transparent text-white top-0 lg:top-9"
+            : "bg-transparent text-black top-0 lg:top-9"
       )}
       style={{ zIndex: 99999 }}
     >

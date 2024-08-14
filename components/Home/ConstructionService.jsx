@@ -41,7 +41,7 @@ const services = [
 
 export default function ConstructionService() {
   return (
-    <div className="py-8 px-2 lg:py-[94px] container mx-auto">
+    <div className="py-8 px-6 lg:py-[94px] container mx-auto">
       <Heading
         title="Our service"
         description="Licensed, Insured, and Excellent Residential Remodeling & New Construction Services"

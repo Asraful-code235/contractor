@@ -4,6 +4,7 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import DefaultProviders from "@/components/Providers/DefaultProviders";
 import TopBar from "@/components/shared/TopBar";
+import { getUtils } from "@/sanity/client";
 
 export const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,13 @@ export const lexend = Lexend({
   subsets: ["latin"],
 });
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const utils = await getUtils();
   return (
     <html lang="en">
       <body className={inter.className}>
         <main>
-          <TopBar />
+          <TopBar utils={utils} />
           <Navbar />
           <div className="min-h-screen">{children}</div>
           <Footer />

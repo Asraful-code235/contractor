@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function CustomerTestimonials() {
   return (
-    <div className="py-8 px-2 lg:py-[94px] container mx-auto">
+    <div className="py-8 px-6 lg:py-[94px] container mx-auto">
       <div>
         <Heading
           title="What People Say About Us"
@@ -43,9 +43,11 @@ export default function CustomerTestimonials() {
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id}>
                 <div className="p-1">
-                  <q className="text-center">{testimonial.review}</q>
+                  <q className="max-lg:text-xs text-left lg:text-center leading-3 ">
+                    {testimonial.review}
+                  </q>
 
-                  <h3 className="text-xl font-semibold text-center">
+                  <h3 className="text-sm lg:text-xl font-semibold text-center">
                     {testimonial.name}
                   </h3>
                 </div>
