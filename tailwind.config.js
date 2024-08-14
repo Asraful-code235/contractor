@@ -53,6 +53,7 @@ module.exports = {
         },
         "brand-color-one": "#F8C27D",
         "brand-color-two": "#0f3c7c",
+        "brand-bg-color": "#faf8fc",
       },
       borderRadius: {
         lg: "var(--radius)",
