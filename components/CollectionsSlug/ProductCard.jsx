@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function ProductCard() {
   return (
     <div>
-      <Link href="/product/slugs">
+      <Link href="/products/slugs">
         <Image
-          className="w-[280px] h-[280px] object-cover rounded-sm"
+          className="w-[160px] h-[160px] lg:w-[280px] lg:h-[280px] object-cover rounded-sm"
           src="/assets/images/jadoconstruction-image-02.webp"
           width={280}
           height={280}
