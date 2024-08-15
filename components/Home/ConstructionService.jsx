@@ -49,7 +49,7 @@ export default function ConstructionService({ module }) {
                     {service.description}
                   </p>
                   <div>
-                    <Link href={`/collections/${service?.url?.current}`}>
+                    <Link href={service?.ctaLink || "/"} target="_blank">
                       <Button
                         size="lg"
                         className="bg-brand-color-one text-black hover:text-white uppercase font-semibold"

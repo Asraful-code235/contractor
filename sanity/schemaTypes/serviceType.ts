@@ -27,7 +27,11 @@ export const serviceType = defineType({
       title: "CTA Text",
       type: "string",
     }),
-
+    defineField({
+      name: "ctaLink",
+      title: "CTA Link",
+      type: "string",
+    }),
     defineField({
       name: "image",
       title: "Image",
