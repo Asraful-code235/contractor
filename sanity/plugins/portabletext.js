@@ -1,23 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PortableText as PortableTextComponent } from "@portabletext/react";
-import { urlForImage } from "../../sanity/image";
 import Iframe from "react-iframe";
 import getVideoId from "get-video-id";
-import { cn } from "../../utils";
 
-import Refractor from "react-refractor";
 import js from "refractor/lang/javascript";
 import jsx from "refractor/lang/jsx";
 import html from "refractor/lang/markup";
 import css from "refractor/lang/css";
 import bash from "refractor/lang/bash";
-
-Refractor.registerLanguage(js);
-Refractor.registerLanguage(jsx);
-Refractor.registerLanguage(html);
-Refractor.registerLanguage(css);
-Refractor.registerLanguage(bash);
 
 // Barebones lazy-loaded image component
 const ImageComponent = ({ value }) => {
@@ -70,17 +61,6 @@ const PortableTextTable = ({ value }) => {
   );
 };
 
-const Code = ({ value }) => {
-  return (
-    <Refractor
-      // In this example, `props` is the value of a `code` field
-      language={value.language || "bash"}
-      value={value.code}
-      markers={value.highlightedLines}
-    />
-  );
-};
-
 const IframePreview = ({ value }) => {
   const { url, height } = value;
   if (!url) {
@@ -113,7 +93,6 @@ const IframePreview = ({ value }) => {
 const components = {
   types: {
     image: ImageComponent,
-    code: Code,
     embed: IframePreview,
     tables: PortableTextTable,
   },

@@ -27,7 +27,7 @@ export default async function RootLayout({ children }) {
           <TopBar utils={utils} />
           <Navbar />
           <div className="min-h-screen">{children}</div>
-          <Footer />
+          <Footer utils={utils} />
         </main>
       </body>
     </html>

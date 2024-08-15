@@ -19,19 +19,19 @@ export default function TopBar({ utils }) {
           </span>
         </div>
         <div className="flex gap-4">
-          <Link href={utils?.socialMediaLinks.faUrl}>
+          <Link href={utils?.socialMediaLinks.faUrl} target="_blank">
             <FaFacebook className="text-xl" />
           </Link>
-          <Link href={utils?.socialMediaLinks.youtubeUrl}>
+          <Link href={utils?.socialMediaLinks.youtubeUrl} target="_blank">
             <IoLogoYoutube className="text-xl" />
           </Link>
-          <Link href={utils?.socialMediaLinks.twitterUrl}>
+          <Link href={utils?.socialMediaLinks.twitterUrl} target="_blank">
             <IoLogoTwitter className="text-xl" />
           </Link>
-          <Link href={utils?.socialMediaLinks.linkedInUrl}>
+          <Link href={utils?.socialMediaLinks.linkedInUrl} target="_blank">
             <FaLinkedin className="text-xl" />
           </Link>
-          <Link href={utils?.socialMediaLinks.instagramUrl}>
+          <Link href={utils?.socialMediaLinks.instagramUrl} target="_blank">
             <FaInstagram className="text-xl" />
           </Link>
         </div>

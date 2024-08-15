@@ -11,6 +11,13 @@ export const PaintingRemodelType = defineType({
       type: "string",
     }),
     defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+      },
+    }),
+    defineField({
       name: "content",
       title: "Content",
       type: "blockContent",

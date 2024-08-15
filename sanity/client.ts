@@ -5,7 +5,16 @@ import {
   useCdn,
   previewSecretId,
 } from "./config";
-import { getAll, home, serviceBySlug, utils } from "./groq";
+import {
+  bathroomRemodel,
+  getAll,
+  home,
+  kitchenRemodel,
+  paintingRemodel,
+  plumbingRemodel,
+  serviceBySlug,
+  utils,
+} from "./groq";
 import { createClient } from "next-sanity";
 
 if (!projectId) {
@@ -66,6 +75,30 @@ export async function getHome() {
 export async function getServiceBySlug(slug) {
   if (client) {
     return (await client.fetch(serviceBySlug, { slug })) || {};
+  }
+  return [];
+}
+export async function getBathroomRemodel() {
+  if (client) {
+    return (await client.fetch(bathroomRemodel)) || {};
+  }
+  return [];
+}
+export async function getKitchenRemodel() {
+  if (client) {
+    return (await client.fetch(kitchenRemodel)) || {};
+  }
+  return [];
+}
+export async function getPaintingRemodel() {
+  if (client) {
+    return (await client.fetch(paintingRemodel)) || {};
+  }
+  return [];
+}
+export async function getPlumbingRemodel() {
+  if (client) {
+    return (await client.fetch(plumbingRemodel)) || {};
   }
   return [];
 }

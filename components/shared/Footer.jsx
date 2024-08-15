@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 
-export default function Footer() {
+export default function Footer({ utils }) {
   return (
     <div className="bg-gray-800 py-8 px-2 lg:p-[94px]">
       <div className="text-white lg:text-start text-center block space-y-16 lg:space-y-0 lg:flex justify-between">
@@ -18,16 +18,12 @@ export default function Footer() {
         <div className="space-y-8 lg:space-y-0 block lg:flex gap-20">
           <div>
             <div className="mb-4 font-semibold">Follow Us</div>
-            <div className="flex flex-col gap-2">
-              <Link href="/">
-                <span className="text-white">Facebook</span>
-              </Link>
-              <Link href="/">
-                <span className="text-white">Instagram</span>
-              </Link>
-              <Link href="/">
-                <span className="text-white">Twitter</span>
-              </Link>
+            <div className="flex flex-col gap-2 ">
+              {utils?.footerLinks?.map((item, key) => (
+                <Link href={item?.socialMediaLink} key={key} target="_blank">
+                  <span className="text-white">{item.title}</span>
+                </Link>
+              ))}
             </div>
           </div>
           <div className="flex flex-col gap-3 lg:items-start items-center">
@@ -37,15 +33,20 @@ export default function Footer() {
             </div>
             <div className="flex gap-2">
               <FiClock className="text-lg mt-1" />
-              <span>
-                Mon-Fri: 9:00 am - 6:00 pm <br />
-                Sat: 9:00 am - 5:00 pm <br />
-                Sun: 9:00 am - 5:00 pm <br />
+              <span className="flex flex-col">
+                {utils?.scheduleTime?.map((item, key) => (
+                  <span key={key}>{item}</span>
+                ))}
               </span>
             </div>
             <div className="flex gap-2">
               <MdEmail className="text-lg mt-1" />
-              <span>joe@Jadoconstruction.com</span>
+              <a
+                href={`mailto:${utils?.email}`}
+                className="text-blue-500 hover:underline"
+              >
+                Send us an email
+              </a>
             </div>
           </div>
         </div>
