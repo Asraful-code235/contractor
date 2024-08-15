@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -5,8 +7,32 @@ import { Textarea } from "../ui/textarea";
 import { IoMdCall } from "react-icons/io";
 import { FaRegClock } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 export default function ContactContent() {
+  const formRef = useRef(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log({ formRef });
+    if (formRef.current) {
+      await emailjs
+        .sendForm(
+          "service_mhes258",
+          "template_9do5abh",
+          formRef.current,
+          "NBm1Am8HA6NeOIEUY"
+        )
+        .then(
+          (result) => {
+            e.target.reset();
+            toast.success("Successfully Send!");
+          },
+          (error) => {}
+        );
+    }
+  };
   return (
     <div>
       <div className="relative bg-[url('/assets/images/jadoconstruction-image-07.jpg')] w-full py-32 bg-no-repeat bg-cover bg-center px-2">
@@ -40,13 +66,14 @@ export default function ContactContent() {
               </div>
             </div>
           </div>
-          <form>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
                   required
                 />
@@ -56,6 +83,7 @@ export default function ContactContent() {
                 <Input
                   id="name"
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
                   required
                 />
@@ -65,6 +93,7 @@ export default function ContactContent() {
                 <Textarea
                   className="resize-none"
                   id="message"
+                  name="message"
                   placeholder="Type your message here."
                   required
                 />

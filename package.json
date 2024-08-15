@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@portabletext/react": "^3.1.0",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
     "@sanity/icons": "^3.3.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.53.0",
@@ -23,6 +25,7 @@
     "lucide-react": "^0.426.0",
     "next": "14.2.5",
     "next-sanity": "^9.4.5",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
@@ -30,6 +33,7 @@
     "react-iframe": "^1.8.5",
     "react-refractor": "^3.1.1",
     "sanity": "^3.53.0",
+    "sonner": "^1.5.0",
     "styled-components": "^6.1.12",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
