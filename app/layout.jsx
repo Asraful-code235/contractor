@@ -5,6 +5,7 @@ import Footer from "@/components/shared/Footer";
 import DefaultProviders from "@/components/Providers/DefaultProviders";
 import TopBar from "@/components/shared/TopBar";
 import { getUtils } from "@/sanity/client";
+import { Toaster } from "sonner";
 
 export const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default async function RootLayout({ children }) {
           <Navbar />
           <div className="min-h-screen">{children}</div>
           <Footer utils={utils} />
+          <Toaster />
         </main>
       </body>
     </html>
